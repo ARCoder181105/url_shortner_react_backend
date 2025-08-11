@@ -19,6 +19,7 @@ export const handleLogin = async (req, res) => {
 
         console.log(admin);
         const token = getToken(admin);
+        console.log(token);
 
         res.cookie('token', token, {
             httpOnly: true,
