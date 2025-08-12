@@ -17,9 +17,9 @@ export const handleLogin = async (req, res) => {
             return res.status(401).json({ message: 'Invalid password' });
         }
 
-        console.log(admin);
+        // console.log(admin);
         const token = getToken(admin);
-        console.log(token);
+        // console.log(token);
 
         res.cookie('token', token, {
             httpOnly: true,
